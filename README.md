@@ -1,12 +1,13 @@
 MYRegexSearch
 =============
 
-A MediaWiki extension for searching with regular expressions. 
+MYRegexSearch is a MediaWiki extension for searching all pages with regular
+expressions. 
 
 ![screenshot](https://github.com/zackz/MYRegexSearch/raw/master/screenshot.png)
 
 Before installation
-===================
+-------------------
 
 MYRegexSearch was created for finding exact text I had wrote in wiki which 
 is for my personal knowledge management. Since the PKM wiki was used only by
@@ -14,7 +15,7 @@ myself, there is less consideration about proformance/security/concurrency... ye
 The main task of MYRegexSearch is finding text and display them well.
 
 How to use
-==========
+----------
 
 * Tested environment: mediawiki 1.20.3 / mysql 5.5.29 / php 5.3.10
   * Not used any new features in MYRegexSearch. Mediawiki must be 1.18+ though.
@@ -33,5 +34,8 @@ require_once( "$IP/extensions/MYRegexSearch/MYRegexSearch.php" );
 * Once you have successfully installed MYRegexSearch, it will appear in
 "Special pages --> Data and tools"
 
+More
+----
 
+* [More about finding stuff in MediaWiki](https://github.com/zackz/MYRegexSearch/wiki/More-about-finding-stuff-in-MediaWiki)
 

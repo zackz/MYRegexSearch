@@ -9,8 +9,8 @@ expressions.
 Before installation
 -------------------
 
-MYRegexSearch was created for finding exact text I had wrote in wiki which 
-is for my personal knowledge management. Since the PKM wiki was used only by
+MYRegexSearch was created for finding exact text I had wrote in my wiki which 
+is for personal knowledge management. Since the PKM wiki was used only by
 myself, there is less consideration about proformance/security/concurrency... yet.
 The main task of MYRegexSearch is finding text and display them well.
 

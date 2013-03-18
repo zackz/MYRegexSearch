@@ -21,7 +21,8 @@ class MYRegexSearch extends QueryPage {
 			Xml::openElement( 'form', array( 'id' => 'myregexsearch-form',
 				'method' => 'get', 'action' => $GLOBALS['wgScript'] ) ) .
 			Html::hidden( 'title', $this->getTitle()->getPrefixedDbKey() ) .
-			Xml::input( 'target', 50, $this->getTarget() ) . ' ' .
+			Xml::input( 'target', 50, $this->getTarget(), array( 'autofocus' => '' ) ) .
+			' ' .
 			Xml::submitButton( $this->msg( 'myregexsearch-ok' )->text() ) .
 			' ' .
 			Linker::makeExternalLink(

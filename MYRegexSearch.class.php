@@ -11,6 +11,7 @@ class MYRegexSearch extends QueryPage {
 	}
 
 	function execute( $par ) {
+		$time_start = microtime( true );
 		$this->setHeaders();
 		$this->outputHeader();
 		$out = $this->getOutput();
@@ -34,7 +35,8 @@ class MYRegexSearch extends QueryPage {
 
 		if ( $this->getTarget() ) {
 			$res = parent::execute( $par );
-			// TODO: Output elapsed time...
+			$out->addHTML( $this->msg( 'myregexsearch-elapsedtime' )->numParams(
+				round( microtime( true ) - $time_start, 3 ) ) );
 			return $res;
 		}
 		return 0;

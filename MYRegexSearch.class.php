@@ -52,8 +52,8 @@ class MYRegexSearch extends QueryPage {
 	}
 
 	function getQueryInfo() {
-		$retval = array (
-			'tables' => array ( 'page', 'revision', 'text' ),
+		$retval = array(
+			'tables' => array( 'page', 'revision', 'text' ),
 			'fields' => array(
 				'title' => 'page_title',
 				'namespace' => 'page_namespace',
@@ -79,16 +79,16 @@ class MYRegexSearch extends QueryPage {
 
 		$target = $this->getTarget();
 		$d = MYRegexSearch::getProperDelimiter( $target );
-		preg_match_all( "{$d}.*(?:{$target}).*{$d}iu", $result->text, $lines);
+		preg_match_all( "{$d}.*(?:{$target}).*{$d}iu", $result->text, $lines );
 
 		// Hightlight matched text, escape special chars, and display them all.
 		foreach ( $lines[0] as $line ) {
-			preg_match_all( "{$d}{$target}{$d}iu", $line, $matches, PREG_OFFSET_CAPTURE);
+			preg_match_all( "{$d}{$target}{$d}iu", $line, $matches, PREG_OFFSET_CAPTURE );
 			$lastpos = 0;  // Byte offset
 			foreach ( $matches[0] as $_ ) {
 				$retval .= htmlspecialchars( substr( $line, $lastpos, $_[1] - $lastpos ) ) .
 					'<span class="searchmatch">' . htmlspecialchars( $_[0] ) . '</span>';
-				$lastpos = $_[1] + strlen($_[0]);
+				$lastpos = $_[1] + strlen( $_[0] );
 			}
 			$retval .= htmlspecialchars( substr( $line, $lastpos ) ) . "<br />\n";
 		}
@@ -97,7 +97,7 @@ class MYRegexSearch extends QueryPage {
 
 	static function getProperDelimiter( $pattern ) {
 		$delimiters = '~!@#$%^&*()';
-		for ( $i = 0; $i < strlen($delimiters); $i++ ) {
+		for ( $i = 0; $i < strlen( $delimiters ); $i++ ) {
 			$d = $delimiters[$i];
 			if ( strpos( $pattern, $d ) === false ) {
 				return $d;
@@ -130,5 +130,3 @@ class MYRegexSearch extends QueryPage {
 		return false;
 	}
 }
-
-

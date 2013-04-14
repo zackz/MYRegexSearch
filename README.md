@@ -37,5 +37,4 @@ require_once( "$IP/extensions/MYRegexSearch/MYRegexSearch.php" );
 More
 ----
 
-* [More about finding stuff in MediaWiki](https://github.com/zackz/MYRegexSearch/wiki/More-about-finding-stuff-in-MediaWiki)
-
+* [More about finding stuff in MediaWiki](https://gist.github.com/zackz/5381253)

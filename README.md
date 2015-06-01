@@ -17,7 +17,7 @@ The main task of MYRegexSearch is finding text and display them well.
 How to use
 ----------
 
-* Tested environment: mediawiki 1.20.3 / mysql 5.5.29 / php 5.3.10
+* Tested environment: mediawiki 1.20.3 1.23.9 / mysql 5.5.29 / php 5.3.10
   * Not used any new features in MYRegexSearch. Mediawiki must be 1.18+ though.
 * Put all files into mediawiki extension directory, such as:
 

@@ -63,8 +63,7 @@ class MYRegexSearch extends QueryPage {
 			'conds' => array(
 				'rev_id = page_latest',
 				'rev_text_id = old_id',
-				'CONVERT(old_text USING UTF8) REGEXP ' .
-					wfGetDB( DB_SLAVE )->addQuotes( $this->getTarget() ),
+				'CONVERT(old_text USING UTF8) REGEXP \'' . $this->getTarget() . '\'',
 			),
 		);
 		return $retval;
